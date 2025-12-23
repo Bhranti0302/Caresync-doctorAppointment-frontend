@@ -1,5 +1,6 @@
 import Sidebar from "../components/layout/Sidebar";
 import HomeVector from "../assets/icon/Vector.png";
+
 import DoctorVector from "../assets/icon/doctor-icon.png";
 import EditDoctorIcon from "../assets/icon/edit-user.svg";
 import { Outlet } from "react-router-dom";
