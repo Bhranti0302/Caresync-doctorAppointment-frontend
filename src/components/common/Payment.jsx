@@ -78,7 +78,7 @@ function CheckoutForm({ appointmentId, fees, closeModal }) {
             : "bg-blue-600 hover:bg-blue-700"
         }`}
       >
-        {loading ? "Processing..." : `Pay ₹${fees}`}
+        {loading ? "Processing..." : `Pay ₹{fees}`}
       </button>
     </form>
   );

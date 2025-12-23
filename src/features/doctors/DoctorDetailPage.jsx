@@ -173,7 +173,7 @@ function DoctorDetailPage() {
                 Fee
               </p>
               <p className="text-2xl font-bold text-stone-800">
-                ${doctorInfo.fees}
+                ₹{doctorInfo.fees}
               </p>
             </div>
             <div>
