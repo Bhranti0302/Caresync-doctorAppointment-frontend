@@ -1,5 +1,5 @@
 import Sidebar from "../components/layout/Sidebar";
-import HomeVector from "../assets/icon/vector.png";
+import HomeVector from "../assets/icon/Vector.png";
 import AppointmentVector from "../assets/icon/appointment-icon.png";
 import AddDoctorVector from "../assets/icon/add-doctor-icon.png";
 import DoctorVector from "../assets/icon/doctor-icon.png";
