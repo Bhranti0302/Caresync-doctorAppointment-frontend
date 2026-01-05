@@ -1,16 +1,92 @@
-# React + Vite
+# CareSync – Doctor Appointment Management Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+CareSync is a web application designed to streamline doctor-patient interactions. It allows users to **book, update, and cancel appointments** with doctors, while doctors can manage their schedules efficiently. The app also supports **profile management, image uploads, and secure authentication**.
 
-Currently, two official plugins are available:
+**Live Project:** (https://caresync-doctor-appointment-frontend-kv43iozx6.vercel.app/)  
+**Tech Stack:** Node.js, Express.js, MongoDB, React.js, Redux.js, Cloudinary
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* 🩺 Book, update, or cancel doctor appointments
+* 👩‍⚕️ Doctor profile management with photo upload
+* 👨‍⚕️ User profile management with secure authentication
+* 🔐 Role-based access control (Admin, Doctor, Patient)
+* 📄 View appointment history and doctor schedules
+* ⚡ Fast, responsive, and user-friendly interface
+* 🌎 Fully deployed on Render
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+### Frontend
+
+* React.js
+* Redux.js (State Management)
+* HTML5 & CSS3
+* Responsive design
+
+### Backend
+
+* Node.js & Express.js
+* MongoDB (Database)
+* Multer & Cloudinary (Image uploads)
+* Bcrypt.js & JWT (Authentication)
+
+### Hosting
+
+* Render (Fullstack Deployment)
+
+---
+
+## 📁 Project Structure
+
+
+---
+
+## 🚀 Deployment (Render)
+
+1. Push project to **GitHub**  
+2. Go to **[https://render.com](https://render.com)**  
+3. Create **New Web Service → Deploy from GitHub**  
+4. Select repository and set environment variables (`.env`)  
+5. Server and client will deploy automatically  
+6. Access your live domain provided by Render  
+
+---
+
+## 🔒 .gitignore File
+
+
+---
+
+## 🧠 How It Works
+
+1. Patients create an account and log in  
+2. Browse doctors and book appointments  
+3. Doctors manage schedules and view appointments  
+4. Users can update their profiles and upload images  
+5. All actions are authenticated and role-based  
+6. Data stored securely in MongoDB  
+
+---
+
+## 👩‍💻 Developer
+
+**Bhranti Tamboli**  
+Full Stack Developer  
+Skills: React, Redux, Node.js, Express.js, MongoDB, Cloudinary, UI/UX  
+
+📧 Contact: [bhrantitamboli40@gmail.com]  
+
+---
+
+## 📜 License
+
+This project is licensed for **educational and portfolio use only**.  
+
+---
+
+⭐ If you like this project, don’t forget to give it a star!
