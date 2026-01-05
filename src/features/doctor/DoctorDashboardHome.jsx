@@ -116,15 +116,13 @@ function DoctorDashboardHome() {
               latestAppointmentsLimited.map((item) => (
                 <AppointmentRow
                   key={item.id}
+                  id={item.id} // ✅ REQUIRED
                   doctorName={loggedInUser?.name}
                   userName={item.userName}
                   date={`${item.date} • ${item.time}`}
                   patientImage={item.patientImage}
                   status={item.status}
-                  statusClass={getStatusColor(item.status)}
-                  onStatusChange={(newStatus) =>
-                    handleStatusChange(item.id, newStatus)
-                  }
+                  onStatusChange={handleStatusChange}
                 />
               ))
             ) : (

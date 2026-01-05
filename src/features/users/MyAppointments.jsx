@@ -9,6 +9,7 @@ import {
 import DefaultDoctorImage from "../../assets/default.png";
 import { useNavigate } from "react-router-dom";
 import StripePayment from "../../components/common/Payment";
+
 function MyAppointments() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -34,7 +35,6 @@ function MyAppointments() {
     setSelectedAppointment(appointment);
   };
 
-  // Close payment modal
   const closeModal = () => setSelectedAppointment(null);
 
   // ========================== UI STATES ==========================
@@ -90,6 +90,7 @@ function MyAppointments() {
         {bookings.map((item) => {
           const doctor = item.doctorData || item.doctor || {};
           let doctorImg = DefaultDoctorImage;
+
           if (doctor?.image) {
             doctorImg =
               typeof doctor.image === "string"
@@ -178,7 +179,7 @@ function MyAppointments() {
                   </button>
                 )}
 
-                {/* Cancel */}
+                {/* Cancel / Cancelled */}
                 {!item.cancelled ? (
                   <button
                     onClick={() => handleDelete(item._id)}
@@ -192,7 +193,9 @@ function MyAppointments() {
                     disabled
                     className="border border-red-200 text-red-400 py-2.5 px-10 rounded-lg bg-red-50 font-medium cursor-not-allowed"
                   >
-                    Appointment Cancelled
+                    {item.paid
+                      ? "Appointment Cancelled. You will get your money back"
+                      : "Appointment Cancelled"}
                   </button>
                 )}
               </div>
@@ -205,7 +208,6 @@ function MyAppointments() {
       {selectedAppointment && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
           <div className="bg-white rounded-3xl shadow-2xl w-full max-w-md p-8 relative animate-fadeIn border border-gray-100">
-            {/* Modal Header */}
             <div className="flex justify-between items-center mb-6 border-b border-gray-200 pb-2">
               <h3 className="text-2xl font-semibold text-stone-800">
                 Pay ₹{selectedAppointment.fees}
@@ -218,7 +220,6 @@ function MyAppointments() {
               </button>
             </div>
 
-            {/* Stripe Payment Form */}
             <div className="mt-4 bg-gray-50 p-6 rounded-xl border border-gray-100 shadow-sm">
               <StripePayment
                 appointmentId={selectedAppointment._id}
